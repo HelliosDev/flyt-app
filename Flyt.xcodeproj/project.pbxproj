@@ -21,7 +21,7 @@
 		2610B5D0246CF9FE00D79E89 /* Flyt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flyt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2610B5D3246CF9FE00D79E89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2610B5D5246CF9FE00D79E89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2610B5D7246CF9FE00D79E89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		2610B5D7246CF9FE00D79E89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2610B5DA246CF9FE00D79E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2610B5DC246CF9FF00D79E89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2610B5DF246CF9FF00D79E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,9 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				2610B5E9246CFA7D00D79E89 /* Models */,
-				2610B5E7246CFA6D00D79E89 /* Controllers */,
 				2610B5D3246CF9FE00D79E89 /* AppDelegate.swift */,
 				2610B5D9246CF9FE00D79E89 /* Main.storyboard */,
+				2610B5D7246CF9FE00D79E89 /* ViewController.swift */,
+				808F437D246D0FA800E41721 /* secondViewController.swift */,
 				2610B5D5246CF9FE00D79E89 /* SceneDelegate.swift */,
 				2610B5DC246CF9FF00D79E89 /* Assets.xcassets */,
 				2610B5DE246CF9FF00D79E89 /* LaunchScreen.storyboard */,
@@ -72,19 +73,10 @@
 			path = Flyt;
 			sourceTree = "<group>";
 		};
-		2610B5E7246CFA6D00D79E89 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2610B5D7246CF9FE00D79E89 /* ViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		2610B5E9246CFA7D00D79E89 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				2610B5EA246CFAAB00D79E89 /* Level.swift */,
-				808F437D246D0FA800E41721 /* secondViewController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
