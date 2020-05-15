@@ -38,8 +38,9 @@ class ViewController: UIViewController {
         labelTime.text = "⏱ \(currentLevel.time) mins"
         labelDescription.text = currentLevel.description
     }
+    
 
-    @IBAction func handlePrev(_ sender: Any) {
+    private func showPrev() {
         if currentIndex == 0  {
             currentIndex = levels.count - 1
         } else {
@@ -48,13 +49,25 @@ class ViewController: UIViewController {
         showLevel()
     }
     
-    @IBAction func handleNext(_ sender: Any) {
+    private func showNext() {
         if currentIndex == levels.count - 1  {
             currentIndex = 0
         } else {
             currentIndex += 1
         }
         showLevel()
+    }
+    
+    
+    @IBAction func handleSelection(_ sender: AnyObject) {
+        switch sender.tag {
+            case 0:
+                showPrev()
+            case 1:
+                showNext()
+            default:
+                break
+        }
     }
     
     
