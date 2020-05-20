@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3BDCD72475228E004B763B /* CoreMotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3BDCD62475228E004B763B /* CoreMotionViewController.swift */; };
 		2610B5D4246CF9FE00D79E89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610B5D3246CF9FE00D79E89 /* AppDelegate.swift */; };
 		2610B5D6246CF9FE00D79E89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610B5D5246CF9FE00D79E89 /* SceneDelegate.swift */; };
 		2610B5D8246CF9FE00D79E89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610B5D7246CF9FE00D79E89 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D3BDCD62475228E004B763B /* CoreMotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionViewController.swift; sourceTree = "<group>"; };
 		2610B5D0246CF9FE00D79E89 /* Flyt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flyt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2610B5D3246CF9FE00D79E89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2610B5D5246CF9FE00D79E89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				2610B5D3246CF9FE00D79E89 /* AppDelegate.swift */,
 				2610B5D9246CF9FE00D79E89 /* Main.storyboard */,
 				2610B5D7246CF9FE00D79E89 /* ViewController.swift */,
+				0D3BDCD62475228E004B763B /* CoreMotionViewController.swift */,
 				808F437D246D0FA800E41721 /* secondViewController.swift */,
 				2610B5D5246CF9FE00D79E89 /* SceneDelegate.swift */,
 				2610B5DC246CF9FF00D79E89 /* Assets.xcassets */,
@@ -237,6 +240,7 @@
 				2610B5EB246CFAAB00D79E89 /* Level.swift in Sources */,
 				808F437E246D0FA800E41721 /* secondViewController.swift in Sources */,
 				2610B5D6246CF9FE00D79E89 /* SceneDelegate.swift in Sources */,
+				0D3BDCD72475228E004B763B /* CoreMotionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HA727BMPYK;
+				DEVELOPMENT_TEAM = 37P7N7R8J2;
 				INFOPLIST_FILE = Flyt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -399,7 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HA727BMPYK;
+				DEVELOPMENT_TEAM = 37P7N7R8J2;
 				INFOPLIST_FILE = Flyt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
