@@ -32,6 +32,7 @@
 		26B30604246E5143006EAE9A /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26B305F2246E5143006EAE9A /* Montserrat-Medium.ttf */; };
 		26B30605246E5143006EAE9A /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26B305F3246E5143006EAE9A /* Montserrat-MediumItalic.ttf */; };
 		26B30606246E5143006EAE9A /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26B305F4246E5143006EAE9A /* Montserrat-SemiBold.ttf */; };
+		26C3B51B247CA886005E688D /* Flyt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26C3B519247CA886005E688D /* Flyt.xcdatamodeld */; };
 		808F437E246D0FA800E41721 /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808F437D246D0FA800E41721 /* secondViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		26B305F2246E5143006EAE9A /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		26B305F3246E5143006EAE9A /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
 		26B305F4246E5143006EAE9A /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		26C3B51A247CA886005E688D /* Flyt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flyt.xcdatamodel; sourceTree = "<group>"; };
 		808F437D246D0FA800E41721 /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 		2610B5D2246CF9FE00D79E89 /* Flyt */ = {
 			isa = PBXGroup;
 			children = (
+				26C3B518247CA827005E688D /* Core Data */,
 				26B305E2246E512A006EAE9A /* fonts */,
 				2610B5E9246CFA7D00D79E89 /* Models */,
 				2610B5D3246CF9FE00D79E89 /* AppDelegate.swift */,
@@ -141,6 +144,14 @@
 				26B305E3246E5142006EAE9A /* Montserrat-ThinItalic.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		26C3B518247CA827005E688D /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				26C3B519247CA886005E688D /* Flyt.xcdatamodeld */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 				2610B5D4246CF9FE00D79E89 /* AppDelegate.swift in Sources */,
 				2610B5EB246CFAAB00D79E89 /* Level.swift in Sources */,
 				808F437E246D0FA800E41721 /* secondViewController.swift in Sources */,
+				26C3B51B247CA886005E688D /* Flyt.xcdatamodeld in Sources */,
 				2610B5D6246CF9FE00D79E89 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +446,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		26C3B519247CA886005E688D /* Flyt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				26C3B51A247CA886005E688D /* Flyt.xcdatamodel */,
+			);
+			currentVersion = 26C3B51A247CA886005E688D /* Flyt.xcdatamodel */;
+			path = Flyt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2610B5C8246CF9FE00D79E89 /* Project object */;
 }
