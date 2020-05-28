@@ -13,9 +13,9 @@ class SecondViewController: UIViewController {
 
     var timer = Timer()
     var seconds = 60.0
-    
+    var rest = false
     var isPaused = false
-   
+
     let motionChecker = MotionChecker()
    
     @IBOutlet weak var btnStart: UIButton!
@@ -29,17 +29,42 @@ class SecondViewController: UIViewController {
     @IBAction func startAction(_ sender: Any) {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         
-        motionChecker.handleHipRotation()
+        motionChecker.handleForwardBackward()
+        
+//        if !rest {
+//            startActivity(activity: Activity.hipRotations)
+//        } else {
+//            startRest(time: 20.0)
+//        }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            self.timer.invalidate()
-            self.motionChecker.stopMotion()
+            self.stopActivity()
         }
     }
    
     @objc func updateTimer(){
         seconds -= 1
         labelTimer.text = String(format: "%.0f", seconds)
-        print(String(format: "%.0f", seconds))
+    }
+    
+    func startActivity(activity: Activity) {
+        switch activity {
+        case .hipRotations:
+            motionChecker.handleHipRotation()
+        case .forwardBackwards:
+            motionChecker.handleForwardBackward()
+        }
+    }
+    
+    func stopActivity() {
+        self.timer.invalidate()
+        self.motionChecker.stopMotion()
+    }
+    
+    func startRest(time: Double) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + time) {
+            self.timer.invalidate()
+            self.startActivity(activity: Activity.forwardBackwards)
+        }
     }
 }
