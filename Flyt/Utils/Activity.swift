@@ -8,7 +8,8 @@
 
 import Foundation
 
-enum Activity {
-    case hipRotations
-    case forwardBackwards
+enum Activity : String {
+    case hipRotations = "Hip Rotations"
+    case forwardBackwards = "Forwards & Backwards"
+    case rest = "Rest"
 }
