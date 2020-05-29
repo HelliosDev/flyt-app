@@ -199,8 +199,8 @@
                                         <rect key="frame" x="76" y="115" width="262" height="193"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HIP ROTATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnO-8g-PQN">
-                                        <rect key="frame" x="102" y="51" width="211" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HIP ROTATION" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnO-8g-PQN">
+                                        <rect key="frame" x="8" y="51" width="398" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <color key="textColor" red="0.17254901959999999" green="0.1137254902" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -216,6 +216,7 @@
                     <navigationItem key="navigationItem" id="BdU-q5-Ytn"/>
                     <connections>
                         <outlet property="btnStart" destination="9cD-IA-lof" id="3Wb-RB-5l6"/>
+                        <outlet property="labelActivity" destination="DnO-8g-PQN" id="cjY-Gc-HNA"/>
                         <outlet property="labelTimer" destination="ETZ-Ce-wp2" id="f1D-bo-RB5"/>
                     </connections>
                 </viewController>
