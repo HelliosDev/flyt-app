@@ -30,13 +30,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXD-r0-fxi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXD-r0-fxi">
                                 <rect key="frame" x="-10" y="0.0" width="424" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RN9-fw-iMv">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RN9-fw-iMv">
                                         <rect key="frame" x="55" y="354" width="314" height="223"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ev-c7-TF9">
                                                 <rect key="frame" x="284" y="90" width="30" height="42"/>
@@ -83,11 +81,18 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.17254901959999999" green="0.1137254902" blue="0.76862745099999996" alpha="0.88" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="223" id="gHr-Wh-3QK"/>
+                                            <constraint firstAttribute="width" constant="314" id="o9e-fI-a5o"/>
+                                        </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4y-mU-DtF">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4y-mU-DtF">
                                         <rect key="frame" x="93" y="609" width="238" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.027450980390000001" green="0.63137254899999995" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="238" id="TbH-fP-bXT"/>
+                                            <constraint firstAttribute="height" constant="48" id="Z62-Ye-m5J"/>
+                                        </constraints>
                                         <state key="normal" title="START">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="START">
@@ -107,22 +112,41 @@
                                             <segue destination="pPw-yk-NRd" kind="show" id="WHi-OB-oEX"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SELECT LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMU-t5-p5P">
-                                        <rect key="frame" x="8" y="314" width="412" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMU-t5-p5P">
+                                        <rect key="frame" x="8" y="314" width="412" height="27"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FLYT Logo" translatesAutoresizingMaskIntoConstraints="NO" id="sr1-OD-P3B">
-                                        <rect key="frame" x="112" y="139" width="204" height="83"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FLYT Logo" translatesAutoresizingMaskIntoConstraints="NO" id="sr1-OD-P3B">
+                                        <rect key="frame" x="112" y="139" width="204" height="109"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.035294117649999998" green="0.078431372550000003" blue="0.23921568630000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="RN9-fw-iMv" firstAttribute="top" secondItem="qXD-r0-fxi" secondAttribute="top" constant="354" id="9JD-MK-wNk"/>
+                                    <constraint firstItem="eMU-t5-p5P" firstAttribute="leading" secondItem="qXD-r0-fxi" secondAttribute="leading" constant="8" id="9oc-rR-jRz"/>
+                                    <constraint firstItem="eMU-t5-p5P" firstAttribute="top" secondItem="sr1-OD-P3B" secondAttribute="bottom" constant="66" id="CT7-2C-Dzh"/>
+                                    <constraint firstItem="RN9-fw-iMv" firstAttribute="leading" secondItem="qXD-r0-fxi" secondAttribute="leading" constant="55" id="FGm-uy-ee7"/>
+                                    <constraint firstAttribute="height" constant="896" id="Iqj-cs-x0f"/>
+                                    <constraint firstAttribute="trailing" secondItem="u4y-mU-DtF" secondAttribute="trailing" constant="93" id="J5l-JH-Ecq"/>
+                                    <constraint firstItem="sr1-OD-P3B" firstAttribute="top" secondItem="qXD-r0-fxi" secondAttribute="top" constant="139" id="M5j-Ij-P5f"/>
+                                    <constraint firstAttribute="bottom" secondItem="u4y-mU-DtF" secondAttribute="bottom" constant="239" id="MP1-K1-Dfh"/>
+                                    <constraint firstItem="u4y-mU-DtF" firstAttribute="top" secondItem="qXD-r0-fxi" secondAttribute="top" constant="609" id="N5h-v0-vzE"/>
+                                    <constraint firstItem="u4y-mU-DtF" firstAttribute="leading" secondItem="qXD-r0-fxi" secondAttribute="leading" priority="999" constant="93" id="PHs-z8-scV"/>
+                                    <constraint firstAttribute="trailing" secondItem="RN9-fw-iMv" secondAttribute="trailing" constant="55" id="Q3T-tG-3xr"/>
+                                    <constraint firstAttribute="trailing" secondItem="sr1-OD-P3B" secondAttribute="trailing" constant="108" id="Qub-qh-uFS"/>
+                                    <constraint firstAttribute="width" constant="424" id="bOh-Rc-KjN"/>
+                                    <constraint firstAttribute="trailing" secondItem="eMU-t5-p5P" secondAttribute="trailing" constant="4" id="rgq-w6-5j4"/>
+                                    <constraint firstItem="sr1-OD-P3B" firstAttribute="leading" secondItem="qXD-r0-fxi" secondAttribute="leading" constant="112" id="sp8-y0-ocL"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qXD-r0-fxi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B4J-AI-mm5"/>
+                            <constraint firstAttribute="bottom" secondItem="qXD-r0-fxi" secondAttribute="bottom" id="JmR-vx-fjJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
