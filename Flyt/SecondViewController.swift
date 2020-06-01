@@ -20,24 +20,30 @@ class SecondViewController: UIViewController {
     //MARK: -Activity Sequence
     let activities: [Activity] = [
         .hipRotations,
-        .rest,
-        .forwardBackwards,
-        .rest
+//        .rest,
+//        .forwardBackwards,
+//        .rest
     ]
      
+    @IBOutlet weak var imageInstruction: UIImageView!
     @IBOutlet weak var btnStart: UIButton!
     @IBOutlet weak var labelTimer: UILabel!
     @IBOutlet weak var labelActivity: UILabel!
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var popupComplete: UIView!
+    @IBOutlet var popupSpirit: UIView!
+    @IBOutlet weak var popupNotice: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         btnStart.layer.cornerRadius = btnStart.frame.height / 2
         seconds = activityDuration
+        popupNotice.isHidden = false
         labelActivity.text = self.activities[currentActivity].rawValue
     }
      
     @IBAction func startAction(_ sender: Any) {
+        popupNotice.isHidden = true
         startActivity()
      }
 
@@ -60,6 +66,7 @@ class SecondViewController: UIViewController {
     func checkActivity(activity: Activity) {
         self.seconds = activityDuration
         self.mainView.backgroundColor = UIColor(hex: 0x2C1DC4)
+        imageInstruction.image = UIImage(named: "running")
         switch activity {
         case .hipRotations:
             motionChecker.handleHipRotation()
@@ -67,6 +74,7 @@ class SecondViewController: UIViewController {
             motionChecker.handleForwardBackward()
         case .rest:
             self.mainView.backgroundColor = UIColor(hex: 0x7CB4C4)
+            imageInstruction.image = UIImage(named: "rest")
             self.seconds = restDuration
         }
     }
@@ -76,7 +84,26 @@ class SecondViewController: UIViewController {
         self.motionChecker.stopMotion()
         if currentActivity < self.activities.count {
             startActivity()
+        } else {
+            showPopup()
         }
+    }
+    
+    func showPopup() {
+        self.navigationController?.isNavigationBarHidden = true
+        self.view.addSubview(popupComplete)
+        popupComplete.center = self.view.center
+    }
+    
+    private func showAlert() {
+        UIView.transition(with: self.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
+            self.view.addSubview(self.popupSpirit)
+            self.popupSpirit.center = self.view.center
+        }, completion: nil)
+
+        UIView.transition(with: self.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
+            self.popupSpirit.removeFromSuperview()
+        }, completion: nil)
     }
 
     func initTimer() {
