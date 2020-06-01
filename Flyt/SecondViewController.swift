@@ -15,13 +15,21 @@ class SecondViewController: UIViewController {
     var seconds = 0.0
 
     let motionChecker = MotionChecker()
-    let activities: [Activity] = [.hipRotations, .rest, .forwardBackwards]
     var currentActivity = 0
+    
+    //MARK: -Activity Sequence
+    let activities: [Activity] = [
+        .hipRotations,
+        .rest,
+        .forwardBackwards,
+        .rest
+    ]
      
     @IBOutlet weak var btnStart: UIButton!
     @IBOutlet weak var labelTimer: UILabel!
     @IBOutlet weak var labelActivity: UILabel!
-
+    @IBOutlet weak var mainView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         btnStart.layer.cornerRadius = btnStart.frame.height / 2
@@ -51,12 +59,14 @@ class SecondViewController: UIViewController {
      
     func checkActivity(activity: Activity) {
         self.seconds = activityDuration
+        self.mainView.backgroundColor = UIColor(hex: 0x2C1DC4)
         switch activity {
         case .hipRotations:
             motionChecker.handleHipRotation()
         case .forwardBackwards:
             motionChecker.handleForwardBackward()
         case .rest:
+            self.mainView.backgroundColor = UIColor(hex: 0x7CB4C4)
             self.seconds = restDuration
         }
     }
@@ -71,6 +81,18 @@ class SecondViewController: UIViewController {
 
     func initTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+
+}
+
+extension UIColor {
+    convenience init(hex: Int) {
+        let components = (
+            R: CGFloat((hex >> 16) & 0xff) / 255,
+            G: CGFloat((hex >> 08) & 0xff) / 255,
+            B: CGFloat((hex >> 00) & 0xff) / 255
+        )
+        self.init(red: components.R, green: components.G, blue: components.B, alpha: 1)
     }
 
 }
