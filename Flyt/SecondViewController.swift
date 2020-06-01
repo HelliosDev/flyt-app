@@ -72,6 +72,10 @@ class SecondViewController: UIViewController {
             motionChecker.handleHipRotation()
         case .forwardBackwards:
             motionChecker.handleForwardBackward()
+        case .rightLeft:
+            motionChecker.handleRightLeft()
+        case .inOut:
+            motionChecker.handleInOut()
         case .rest:
             self.mainView.backgroundColor = UIColor(hex: 0x7CB4C4)
             imageInstruction.image = UIImage(named: "rest")

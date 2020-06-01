@@ -11,5 +11,7 @@ import Foundation
 enum Activity : String {
     case hipRotations = "Hip Rotations"
     case forwardBackwards = "Forwards & Backwards"
+    case rightLeft = "Right Left Right Left"
+    case inOut = "In and Outs"
     case rest = "Rest"
 }
