@@ -13,6 +13,7 @@ class SecondViewController: UIViewController {
     let activityDuration = 10.0
     let restDuration = 5.0
     var seconds = 0.0
+    var paused = false
 
     let motionChecker = MotionChecker()
     var currentActivity = 0
@@ -20,9 +21,13 @@ class SecondViewController: UIViewController {
     //MARK: -Activity Sequence
     let activities: [Activity] = [
         .hipRotations,
-//        .rest,
-//        .forwardBackwards,
-//        .rest
+        .rest,
+        .forwardBackwards,
+        .rest,
+        .inOut,
+        .rest,
+        .rightLeft,
+        .rest
     ]
      
     @IBOutlet weak var imageInstruction: UIImageView!
@@ -63,7 +68,7 @@ class SecondViewController: UIViewController {
         }
     }
      
-    func checkActivity(activity: Activity) {
+    private func checkActivity(activity: Activity) {
         self.seconds = activityDuration
         self.mainView.backgroundColor = UIColor(hex: 0x2C1DC4)
         imageInstruction.image = UIImage(named: "running")
@@ -83,7 +88,7 @@ class SecondViewController: UIViewController {
         }
     }
      
-    func stopActivity() {
+    private func stopActivity() {
         self.timer.invalidate()
         self.motionChecker.stopMotion()
         if currentActivity < self.activities.count {
@@ -93,7 +98,11 @@ class SecondViewController: UIViewController {
         }
     }
     
-    func showPopup() {
+    func pause() {
+        
+    }
+    
+    private func showPopup() {
         self.navigationController?.isNavigationBarHidden = true
         self.view.addSubview(popupComplete)
         popupComplete.center = self.view.center
@@ -110,10 +119,10 @@ class SecondViewController: UIViewController {
         }, completion: nil)
     }
 
-    func initTimer() {
+    private func initTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
-
+    
 }
 
 extension UIColor {
