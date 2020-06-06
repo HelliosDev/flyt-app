@@ -41,28 +41,6 @@
                                         <rect key="frame" x="55" y="354" width="314" height="223"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ev-c7-TF9">
-                                                <rect key="frame" x="284" y="90" width="30" height="42"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                <state key="normal" title="&gt;">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="handleSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ca3-VG-YRf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoF-hT-F3h">
-                                                <rect key="frame" x="0.0" y="90" width="30" height="42"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                <state key="normal" title="&lt;">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="handleSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TzC-QK-Rvc"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BEGINNER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdS-8h-ufa">
                                                 <rect key="frame" x="14" y="18" width="286" height="38"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -86,9 +64,25 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.17254901959999999" green="0.1137254902" blue="0.76862745099999996" alpha="0.88" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SELECT LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMU-t5-p5P">
+                                        <rect key="frame" x="8" y="314" width="412" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FLYT Logo" translatesAutoresizingMaskIntoConstraints="NO" id="sr1-OD-P3B">
+                                        <rect key="frame" x="112" y="139" width="204" height="83"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="SlD-pk-GlD">
+                                        <rect key="frame" x="195" y="585" width="39" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </pageControl>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4y-mU-DtF">
-                                        <rect key="frame" x="93" y="609" width="238" height="48"/>
+                                        <rect key="frame" x="95" y="646" width="238" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.027450980390000001" green="0.63137254899999995" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <state key="normal" title="START">
@@ -110,38 +104,40 @@
                                             <segue destination="pPw-yk-NRd" kind="show" id="WHi-OB-oEX"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SELECT LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMU-t5-p5P">
-                                        <rect key="frame" x="8" y="314" width="412" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FLYT Logo" translatesAutoresizingMaskIntoConstraints="NO" id="sr1-OD-P3B">
-                                        <rect key="frame" x="112" y="139" width="204" height="83"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.035294117649999998" green="0.078431372550000003" blue="0.23921568630000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7KR-SP-7l6" appends="YES" id="nFQ-BM-Bnt"/>
+                            <outletCollection property="gestureRecognizers" destination="bS4-aH-7Yb" appends="YES" id="rdL-cS-Wff"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="pbv-jn-RGa"/>
                     <connections>
-                        <outlet property="btnNext" destination="3ev-c7-TF9" id="AaY-5U-iRr"/>
-                        <outlet property="btnPrev" destination="KoF-hT-F3h" id="Ouo-Mw-Ghc"/>
                         <outlet property="btnStart" destination="u4y-mU-DtF" id="m9U-it-kFI"/>
                         <outlet property="cardLevel" destination="RN9-fw-iMv" id="5hd-87-tkM"/>
                         <outlet property="labelDescription" destination="sR3-rZ-a4a" id="57v-kC-PCJ"/>
                         <outlet property="labelLevel" destination="jdS-8h-ufa" id="93y-ed-cXe"/>
                         <outlet property="labelTime" destination="jHC-8z-E9G" id="hQx-0P-FZs"/>
+                        <outlet property="levelPageControl" destination="SlD-pk-GlD" id="EuI-rg-3Nm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="7KR-SP-7l6">
+                    <connections>
+                        <action selector="swipeLeft:" destination="BYZ-38-t0r" id="Vnc-tu-SQM"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="bS4-aH-7Yb">
+                    <connections>
+                        <action selector="swipeRight:" destination="BYZ-38-t0r" id="k1t-hg-Vrh"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
+            <point key="canvasLocation" x="942" y="134"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="37G-da-F8Z">
@@ -185,7 +181,7 @@
                                             <action selector="startAction:" destination="pPw-yk-NRd" eventType="touchUpInside" id="MYX-Ai-WPl"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETZ-Ce-wp2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETZ-Ce-wp2">
                                         <rect key="frame" x="123" y="171" width="149" height="86"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="72"/>
@@ -221,7 +217,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="running" translatesAutoresizingMaskIntoConstraints="NO" id="IC8-Gb-lup">
-                                        <rect key="frame" x="76" y="125" width="262" height="193"/>
+                                        <rect key="frame" x="8" y="101" width="398" height="248"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -309,7 +305,7 @@
         <!--Navigation Controller-->
         <scene sceneID="z3v-kb-d9b">
             <objects>
-                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="L7M-h3-3z6" sceneMemberID="viewController">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="light" id="L7M-h3-3z6" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="sCt-QU-sIU">
@@ -337,6 +333,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="WHi-OB-oEX"/>
         <segue reference="kni-e1-Bg5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
