@@ -1,0 +1,45 @@
+
+/* Class = "UILabel"; text = "s"; ObjectID = "26y-U2-B7F"; */
+"26y-U2-B7F.text" = "s";
+
+/* Class = "UIButton"; normalTitle = "START"; ObjectID = "9cD-IA-lof"; */
+"9cD-IA-lof.normalTitle" = "START";
+
+/* Class = "UILabel"; text = "HIP ROTATION"; ObjectID = "DnO-8g-PQN"; */
+"DnO-8g-PQN.text" = "HIP ROTATION";
+
+/* Class = "UIImageView"; accessibilityLabel = "Follow the movement instructed by this image"; ObjectID = "IC8-Gb-lup"; */
+"IC8-Gb-lup.accessibilityLabel" = "Follow the movement instructed by this image";
+
+/* Class = "UILabel"; text = "Keep Going!"; ObjectID = "QWD-Oo-f2Z"; */
+"QWD-Oo-f2Z.text" = "Keep Going!";
+
+/* Class = "UIBarButtonItem"; title = "Level"; ObjectID = "Uhq-W6-Vfd"; */
+"Uhq-W6-Vfd.title" = "Level";
+
+/* Class = "UIButton"; normalTitle = "Select Another Level"; ObjectID = "a65-ih-cfT"; */
+"a65-ih-cfT.normalTitle" = "Select Another Level";
+
+/* Class = "UILabel"; text = "SELECT LEVEL"; ObjectID = "eMU-t5-p5P"; */
+"eMU-t5-p5P.text" = "SELECT LEVEL";
+
+/* Class = "UILabel"; text = "LET'S GO!"; ObjectID = "eSn-l7-JZA"; */
+"eSn-l7-JZA.text" = "LET'S GO!";
+
+/* Class = "UILabel"; text = "Hooray!"; ObjectID = "gzF-Et-be4"; */
+"gzF-Et-be4.text" = "Hooray!";
+
+/* Class = "UILabel"; text = "⏱ 40 mins"; ObjectID = "jHC-8z-E9G"; */
+"jHC-8z-E9G.text" = "⏱ 40 mins";
+
+/* Class = "UILabel"; text = "BEGINNER"; ObjectID = "jdS-8h-ufa"; */
+"jdS-8h-ufa.text" = "BEGINNER";
+
+/* Class = "UILabel"; text = "3 sets of 8 exercises to start footwork training"; ObjectID = "sR3-rZ-a4a"; */
+"sR3-rZ-a4a.text" = "3 sets of 8 exercises to start footwork training";
+
+/* Class = "UIButton"; normalTitle = "START"; ObjectID = "u4y-mU-DtF"; */
+"u4y-mU-DtF.normalTitle" = "START";
+
+/* Class = "UILabel"; text = "Please! Phone on Right hand!"; ObjectID = "wD7-ib-aTf"; */
+"wD7-ib-aTf.text" = "Please! Phone on Right hand!";

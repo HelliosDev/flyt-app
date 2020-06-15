@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var levelPageControl: UIPageControl!
     @IBOutlet weak var btnStart: UIButton!
     
+    let speechService = SpeechService()
+    
     private var currentIndex = 0
     private let levels = [
         Level(name: "Beginner", time: 30, description: "Beginning for flashy agility"),
@@ -31,16 +33,30 @@ class ViewController: UIViewController {
         cardLevel.layer.cornerRadius = 8.0
         btnStart.layer.cornerRadius = btnStart.frame.height / 2
         levelPageControl.numberOfPages = levels.count
+        levelPageControl.accessibilityLabel = "You can swipe to change the level of the exercise"
+        levelPageControl.accessibilityValue = "now your level is \(levels[currentIndex].name)"
+        levelPageControl.accessibilityTraits = .notEnabled
         
         showLevel()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        let welcome = "welcoming user".localized
+        speechService.say(welcome)
+        let level = "level".localized + levels[currentIndex].name
+        speechService.say(level)
+    }
+    
     @IBAction func swipeLeft(_ sender: Any) {
         showNext()
+        let level = "level".localized + levels[currentIndex].name
+        speechService.say(level)
     }
     
     @IBAction func swipeRight(_ sender: Any) {
         showPrev()
+        let level = "level".localized + levels[currentIndex].name
+        speechService.say(level)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

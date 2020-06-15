@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Flyt
+
+  Created by Wendy Kurniawan on 15/06/20.
+  Copyright © 2020 Wendy Kurniawan. All rights reserved.
+*/
+"en-EN" = "en-EN";
+
+"welcoming user" = "Hello! Welcome to Flyt! You can swipe to change the level of exercise to your need!";
+
+"level" = "The level now is";
