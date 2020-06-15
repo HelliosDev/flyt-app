@@ -36,27 +36,23 @@ class ViewController: UIViewController {
         levelPageControl.accessibilityLabel = "You can swipe to change the level of the exercise"
         levelPageControl.accessibilityValue = "now your level is \(levels[currentIndex].name)"
         levelPageControl.accessibilityTraits = .notEnabled
-        
-        showLevel()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         let welcome = "welcoming user".localized
         speechService.say(welcome)
-        let level = "level".localized + levels[currentIndex].name
-        speechService.say(level)
+        showLevel()
+//        let level = "level".localized + levels[currentIndex].name
+//        let time = "with time".localized + String(describing: levels[currentIndex].time)
+//        speechService.say(level + time)
     }
     
     @IBAction func swipeLeft(_ sender: Any) {
         showNext()
-        let level = "level".localized + levels[currentIndex].name
-        speechService.say(level)
     }
     
     @IBAction func swipeRight(_ sender: Any) {
         showPrev()
-        let level = "level".localized + levels[currentIndex].name
-        speechService.say(level)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -74,6 +70,9 @@ class ViewController: UIViewController {
         labelLevel.text = currentLevel.name
         labelTime.text = "⏱ \(currentLevel.time) mins"
         labelDescription.text = currentLevel.description
+        let level = "level".localized + currentLevel.name
+        let time = "with time".localized + String(describing: currentLevel.time) + "mins".localized
+        speechService.say(level + time)
     }
     
     private func showPrev() {

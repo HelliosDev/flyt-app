@@ -7,6 +7,10 @@
 */
 "en-EN" = "en-EN";
 
-"welcoming user" = "Hello! Welcome to Flyt! You can swipe to change the level of exercise to your need!";
+"welcoming user" = "Hello! Welcome to Flyt! You can swipe to change the level of exercise to your need! Please, touch the start button to start the exercise!";
 
 "level" = "The level now is";
+
+"with time" = "with the duration of";
+
+"mins" = "minutes";
