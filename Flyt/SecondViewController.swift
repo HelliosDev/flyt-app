@@ -16,6 +16,7 @@ class SecondViewController: UIViewController {
     var paused = false
     var initial = true
 
+    let speechService = SpeechService()
     let motionChecker = MotionChecker()
     var currentActivity = 0
     
@@ -56,6 +57,15 @@ class SecondViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
         imageInstruction.image = UIImage.gif(name: "hip_rotation")
         activityDuration = 5.0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let message = "instruction intro".localized
+        speechService.say(message)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        speechService.stop()
     }
      
     @IBAction func startAction(_ sender: Any) {
@@ -106,6 +116,7 @@ class SecondViewController: UIViewController {
             initial = false
         }
         self.mainView.backgroundColor = UIColor(hex: 0x2C1DC4)
+        speechService.say(activity.instruction)
         switch activity {
         case .hipRotations:
             imageInstruction.image = UIImage.gif(name: "hip_rotation")

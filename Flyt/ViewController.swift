@@ -42,9 +42,10 @@ class ViewController: UIViewController {
         let welcome = "welcoming user".localized
         speechService.say(welcome)
         showLevel()
-//        let level = "level".localized + levels[currentIndex].name
-//        let time = "with time".localized + String(describing: levels[currentIndex].time)
-//        speechService.say(level + time)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        speechService.stop()
     }
     
     @IBAction func swipeLeft(_ sender: Any) {

@@ -24,6 +24,10 @@ class SpeechService{
         utterenece.voice = AVSpeechSynthesisVoice(language: langCode)
         speechSynthizer.speak(utterenece)
     }
+    
+    func stop() {
+        speechSynthizer.stopSpeaking(at: .immediate)
+    }
 }
 
 extension String{
